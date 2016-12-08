@@ -76,6 +76,7 @@ type Sound struct {
 	buffer [][]byte
 }
 
+
 // Array of all the sounds we have
 var AIRHORN *SoundCollection = &SoundCollection{
 	Prefix: "airhorn",
@@ -191,6 +192,22 @@ var WOW *SoundCollection = &SoundCollection{
 	},
 }
 
+var OBJECTION *SoundCollection = &SoundCollection{
+	Prefix: "objection",
+	Commands: []string{
+		"!objection",
+	},
+	Sounds: []*Sound{
+		createSound("apollo_objection", 1, 250),
+		createSound("athena_objection", 1, 250),
+		createSound("gaspen_objection", 1, 250),
+		createSound("klavier_objection", 1, 250),
+		createSound("miles_objection", 1, 250),
+		createSound("phoenix_objection", 1, 250),
+		createSound("simon_objection", 1, 250),
+	},
+}
+
 var COLLECTIONS []*SoundCollection = []*SoundCollection{
 	AIRHORN,
 	KHALED,
@@ -199,6 +216,7 @@ var COLLECTIONS []*SoundCollection = []*SoundCollection{
 	COW,
 	BIRTHDAY,
 	WOW,
+	OBJECTION,
 }
 
 // Create a Sound struct
